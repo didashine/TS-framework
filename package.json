@@ -1,0 +1,46 @@
+{
+    "name": "ts-framework",
+    "author": "Jack Chen",
+    "version": "1.0.0",
+    "description": "Simplify the development",
+    "main": "index.js",
+    "dependencies": {
+        "amqplib": "^0.5.3",
+        "chalk": "^2.4.2",
+        "cross-env": "^5.2.0",
+        "glob": "^7.1.3",
+        "ioredis": "^4.6.2",
+        "koa": "^2.7.0",
+        "koa-body": "^4.0.4",
+        "koa-router": "^7.4.0",
+        "koa-static": "^5.0.0",
+        "moment": "^2.24.0",
+        "mongoose": "^5.4.14",
+        "reflect-metadata": "^0.1.13",
+        "request": "^2public.88.0",
+        "ts-node": "^7.0.1",
+        "typescript": "^3.1.6",
+        "uuid": "^3.3.2",
+        "validate": "^4.5.1"
+    },
+    "devDependencies": {
+        "@types/ioredis": "^4.0.8",
+        "@types/mongoose": "^5.3.19",
+        "nodemon": "^1.18.10",
+        "typegoose": "^5.5.1"
+    },
+    "nodemonConfig": {
+        "verbose": false,
+        "ignore": [
+            "*.test.js",
+            "fixtures/*"
+        ],
+        "ext": "js,ts"
+    },
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development nodemon index.js",
+        "prod": "cross-env NODE_ENV=production node index.js",
+        "test": "jest --coverage --forceExit --runInBand"
+    },
+    "license": "ISC"
+}
